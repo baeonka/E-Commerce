@@ -6,6 +6,7 @@
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/1bce313b89.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <section id="landing">
@@ -17,25 +18,25 @@
             <li><a href="#" class="nav__link">Contact</a>
             <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
           </ul>
-        </div>
-        <button class="btn__menu">
+        <button class="btn__menu" onclick="openMenu()">
             <i class="fas fa-bars"></i>
         </button>
         <div class="menu__backdrop">
-            <button class="btn__menu btn__menu--close">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
                 <i class="fas fa-times"></i>
             </button>
             <ul class="menu__links">
                 <li class="menu__list">
-                    <a href="#" class="menu__link">Home</a>
+                    <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
                 </li>
                 <li class="menu__list">
-                    <a href="features" class="menu__link">Books</a>
+                    <a href="#features" class="menu__link" onclick="closeMenu()">Books</a>
                 </li>
                 <li class="menu__list">
-                    <a class="menu__link no-cursor">Contacts</a>
+                    <a class="menu__link no-cursor" onclick="closeMenu()">Contacts</a>
                 </li>
             </ul>
+            </div>
         </div>
     </nav>
     <header>
@@ -43,7 +44,9 @@
             <div class="header__description">
                 <h1>America's most awarded online library platform</h1>
                 <h2>Find your dream book with <span class="color">Library</span></h2>
+                <a href="#features">
                 <button class="btn">Browse Books</button>
+                </a>
             </div>
             <figure class="header__img--wrapper">
                 <img src="./assets/Undraw_Books.svg" alt="">
@@ -188,148 +191,148 @@
                     <h2 class="section__title">
                         Latest<span class="color"> Books</span>
                     </h2>
-                    <div class="lbooks">
-                        <div class="lbook">
-                            <figure class="lbook__img--wrapper">
-                                <img class="lbook__img" src="./assets/book-1.jpeg" alt="">
+                    <div class="books">
+                        <div class="book">
+                            <figure class="book__img--wrapper">
+                                <img class="book__img" src="./assets/book-1.jpeg" alt="">
                             </figure>
-                            <div class="lbook__title">
+                            <div class="book__title">
                                 The 10X Rule
                             </div>
-                            <div class="lbook__ratings">
+                            <div class="book__ratings">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <div class="lbook__price">
+                            <div class="book__price">
                                 $59.95
                             </div>
                         </div>
-                        <div class="lbook">
-                            <figure class="lbook__img--wrapper">
-                                <img class="lbook__img" src="./assets/book-2.jpeg" alt="">
+                        <div class="book">
+                            <figure class="book__img--wrapper">
+                                <img class="book__img" src="./assets/book-2.jpeg" alt="">
                             </figure>
-                            <div class="lbook__title">
+                            <div class="book__title">
                                 Be Obsessed Or Be Average
                             </div>
-                            <div class="lbook__ratings">
+                            <div class="book__ratings">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <div class="lbook__price">
+                            <div class="book__price">
                                 $59.95
                             </div>
                         </div>
-                        <div class="lbook">
-                            <figure class="lbook__img--wrapper">
-                                <img class="lbook__img" src="./assets/book-3.jpeg" alt="">
+                        <div class="book">
+                            <figure class="book__img--wrapper">
+                                <img class="book__img" src="./assets/book-3.jpeg" alt="">
                             </figure>
-                            <div class="lbook__title">
+                            <div class="book__title">
                                 Rich Dad Poor Dad
                             </div>
-                            <div class="lbook__ratings">
+                            <div class="book__ratings">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <div class="lbook__price">
+                            <div class="book__price">
                                 $59.95
                             </div>
                         </div>
-                        <div class="lbook">
-                            <figure class="lbook__img--wrapper">
-                                <img class="lbook__img" src="./assets/book-4.jpeg" alt="">
+                        <div class="book">
+                            <figure class="book__img--wrapper">
+                                <img class="book__img" src="./assets/book-4.jpeg" alt="">
                             </figure>
-                            <div class="lbook__title">
+                            <div class="book__title">
                                 Cashflow Quadrant
                             </div>
-                            <div class="lbook__ratings">
+                            <div class="book__ratings">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <div class="lbook__price">
+                            <div class="book__price">
                                 $59.95
                             </div>
                         </div>
-                        <div class="lbook">
-                            <figure class="lbook__img--wrapper">
-                                <img class="lbook__img" src="./assets/book-5.jpeg" alt="">
+                        <div class="book">
+                            <figure class="book__img--wrapper">
+                                <img class="book__img" src="./assets/book-5.jpeg" alt="">
                             </figure>
-                            <div class="lbook__title">
+                            <div class="book__title">
                                 48 Laws of Power
                             </div>
-                            <div class="lbook__ratings">
+                            <div class="book__ratings">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <div class="lbook__price">
+                            <div class="book__price">
                                 $59.95
                             </div>
                         </div>
-                        <div class="lbook">
-                            <figure class="lbook__img--wrapper">
-                                <img class="lbook__img" src="./assets/book-6.jpeg" alt="">
+                        <div class="book">
+                            <figure class="book__img--wrapper">
+                                <img class="book__img" src="./assets/book-6.jpeg" alt="">
                             </figure>
-                            <div class="lbook__title">
+                            <div class="book__title">
                                 The 5 Second Rule
                             </div>
-                            <div class="lbook__ratings">
+                            <div class="book__ratings">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <div class="lbook__price">
+                            <div class="book__price">
                                 $59.95
                             </div>
                         </div>
-                        <div class="lbook">
-                            <figure class="lbook__img--wrapper">
-                                <img class="lbook__img" src="./assets/book-7.jpg" alt="">
+                        <div class="book">
+                            <figure class="book__img--wrapper">
+                                <img class="book__img" src="./assets/book-7.jpg" alt="">
                             </figure>
-                            <div class="lbook__title">
+                            <div class="book__title">
                                 Your Next 5 Moves
                             </div>
-                            <div class="lbook__ratings">
+                            <div class="book__ratings">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <div class="lbook__price">
+                            <div class="book__price">
                                 $59.95
                             </div>
                         </div>
-                        <div class="lbook">
-                            <figure class="lbook__img--wrapper">
-                                <img class="lbook__img" src="./assets/book-8.jpeg" alt="">
+                        <div class="book">
+                            <figure class="book__img--wrapper">
+                                <img class="book__img" src="./assets/book-8.jpeg" alt="">
                             </figure>
-                            <div class="lbook__title">
+                            <div class="book__title">
                                 Mastery
                             </div>
-                            <div class="lbook__ratings">
+                            <div class="book__ratings">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <div class="lbook__price">
+                            <div class="book__price">
                                 $59.95
                             </div>
                         </div>

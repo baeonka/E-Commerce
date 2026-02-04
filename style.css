@@ -93,6 +93,7 @@ li {
     text-align: center;
     border: none;
     color: #7342d6;
+    display: none;
 }
 
 .menu__backdrop {
@@ -106,6 +107,19 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu__open {
+    max-height: 100vh;
+    overflow-y: hidden;
 }
 
 .menu__links {
@@ -286,6 +300,7 @@ HIGHLIGHTS
 .highlight__subtitle {
     font-size: 20px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 /*
@@ -356,51 +371,12 @@ LATEST BOOKS
 
 #latest {
     padding-top: 4vw;
-    height: 1000px;
-    margin-bottom: 240px;
+    margin-bottom: 80px;
 }
 
-.lbooks {
+.books {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
-}
-
-.lbook {
-    width: 25%;
-    padding: 24px;
-}
-
-.lbook__img {
-    max-height: 380px;
-    transition: all 300ms ease;
-    cursor: no-drop;
-}
-.lbook__img--wrapper {
-    margin-bottom: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-    display: flex;
-
-}
-
-.lbook:hover .lbook__img {
-    transform: scale(1.03);
-}
-
-.lbook__title {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.lbook__title:hover {
-    text-decoration: underline;
-    cursor: no-drop;
-}
-
-.lbook__ratings {
-    margin-bottom: 8px;
-    color: #fabf2a;
 }
 
 /*
@@ -443,4 +419,68 @@ footer {
 }
 .footer__link {
     padding: 0 8px;
+}
+
+/*
+
+SMALL PHONES, TABLETS, LARGE SMARTPHONES 
+
+*/
+
+@media (max-width: 768px) {
+    .header__description {
+        padding: 0 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    .book {
+        width: 50%;
+    }
+
+    #features {
+        height: 1232px;
+    }
+
+
+}
+
+
+/* SMALL PHONES, LARGE SMARTPHONES 
+
+*/
+
+@media (max-width: 550px) {
+     
+    .btn__menu {
+        display: block;
+    }
+    
+    .nav__links {
+        display: none;
+    }
+
+    .highlight {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .highlight:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    .book {
+        width: 50%;
+    }
+
 }
